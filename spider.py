@@ -1,11 +1,13 @@
 import csv
+
 import requests
 from bs4 import BeautifulSoup
 
 job_title = 'analyst'
 region = 'Dubai'
 
-url = f'https://www.linkedin.com/jobs/search/?keywords={job_title}&location={region}'
+url = f'https://www.linkedin.com/jobs/search/?currentJobId=3459202038&keywords=%7Banalyst%7D&location=%7Bdubai%7D'
+
 response = requests.get(url)
 
 soup = BeautifulSoup(response.content, 'html.parser')
